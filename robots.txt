@@ -1,0 +1,11 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-Agent: GPTBot
+User-Agent: Google-Extended
+User-Agent: PerplexityBot
+Allow: /
+
+Sitemap: https://teralinkgrabber.com/sitemap.xml
