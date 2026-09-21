@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { toolsData } from '@/data/toolsData';
 import { blogPosts } from '@/data/blogData';
+export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://teralinkgrabber.com';
