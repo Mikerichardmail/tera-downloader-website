@@ -1,24 +1,24 @@
 # Deploy TeraLinkGrabber to GitHub Pages
-Write-Host "Building static export..." -ForegroundColor Cyan
-$env:NEXT_PUBLIC_BASE_PATH="/tera-downloader-website"
-npm run build
+Write-Host "Building static export for custom domain (teralinkgrabber.com)..." -ForegroundColor Cyan
 $env:NEXT_PUBLIC_BASE_PATH=""
+npm run build
 
 if (!(Test-Path "out")) {
     Write-Error "Build failed: 'out' directory not found."
     exit 1
 }
 
-# Ensure .nojekyll is present to allow _next assets on GitHub Pages
+# Ensure .nojekyll and CNAME are present
 Copy-Item -Path "public\.nojekyll" -Destination "out\.nojekyll" -Force
+Copy-Item -Path "public\CNAME" -Destination "out\CNAME" -Force
 
 Write-Host "Pushing to gh-pages branch..." -ForegroundColor Cyan
 Set-Location "out"
 git init -b gh-pages
 git add -A
-git commit -m "Deploy static export to GitHub Pages"
+git commit -m "Deploy static export with CNAME to GitHub Pages"
 git push -f https://github.com/Mikerichardmail/tera-downloader-website.git gh-pages
 Remove-Item -Path .git -Recurse -Force
 Set-Location ..
 
-Write-Host "Deployment complete! Visit: https://mikerichardmail.github.io/tera-downloader-website/" -ForegroundColor Green
+Write-Host "Deployment complete! Custom domain live at: https://teralinkgrabber.com" -ForegroundColor Green
