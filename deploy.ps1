@@ -17,7 +17,12 @@ Set-Location "out"
 git init -b gh-pages
 git add -A
 git commit -m "Deploy static export with CNAME to GitHub Pages"
-git push -f https://github.com/Mikerichardmail/tera-downloader-website.git gh-pages
+$pushUrl = if ($env:GITHUB_PAT) {
+    "https://$($env:GITHUB_PAT)@github.com/Mikerichardmail/tera-downloader-website.git"
+} else {
+    "https://github.com/Mikerichardmail/tera-downloader-website.git"
+}
+git push -f $pushUrl gh-pages
 Remove-Item -Path .git -Recurse -Force
 Set-Location ..
 
