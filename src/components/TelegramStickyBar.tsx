@@ -6,6 +6,18 @@ import { Send, Zap } from 'lucide-react';
 export default function TelegramStickyBar() {
   const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraBoxlDownloaderbot';
 
+  const handleOpenBot = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const nativeUrl = `tg://resolve?domain=${botUsername}`;
+    const webUrl = `https://t.me/${botUsername}`;
+
+    // Try opening native Telegram app on mobile
+    window.location.href = nativeUrl;
+    setTimeout(() => {
+      window.location.href = webUrl;
+    }, 600);
+  };
+
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl md:hidden flex items-center justify-between">
       <div className="flex items-center gap-2.5">
@@ -19,12 +31,13 @@ export default function TelegramStickyBar() {
               <Zap className="w-2.5 h-2.5 mr-0.5" /> Fast
             </span>
           </div>
-          <p className="text-[11px] text-slate-500">Download without web browser limits</p>
+          <p className="text-[11px] text-slate-500">Instant 4K video downloads</p>
         </div>
       </div>
 
       <a
         href={`https://t.me/${botUsername}`}
+        onClick={handleOpenBot}
         target="_blank"
         rel="noopener noreferrer"
         className="px-4 py-2 bg-[#0088cc] active:bg-[#0077b5] text-white text-xs font-bold rounded-lg shadow transition-transform active:scale-95 flex items-center gap-1.5"

@@ -16,17 +16,17 @@ const defaultSteps: Step[] = [
   {
     step: 1,
     title: "1. Copy the TeraBox URL",
-    desc: "Open your TeraBox link on WhatsApp, Telegram, or browser and copy the complete shareable link (e.g., terabox.com/s/1...)."
+    desc: "Copy your TeraBox link from WhatsApp, Telegram, Facebook, or browser (e.g. terabox.com/s/1...)."
   },
   {
     step: 2,
-    title: "2. Paste into TeraLinkGrabber",
-    desc: "Paste the copied URL into the downloader input box above and click 'Grab Link'. Our system parses the link in 2 seconds."
+    title: "2. Paste & Tap Download",
+    desc: "Paste your link into the input box above and tap 'Download in Telegram' to open our automated bot."
   },
   {
     step: 3,
-    title: "3. Direct Download or Stream",
-    desc: "Preview your video in HD using our built-in player or click 'Download' to save the original file directly to your phone or PC."
+    title: "3. Direct 4K Download in Telegram",
+    desc: "Receive the direct HD/4K video file or stream directly in Telegram without app installs or login walls."
   }
 ];
 
