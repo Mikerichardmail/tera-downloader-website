@@ -61,8 +61,57 @@ export default async function ToolPage({ params }: ToolPageProps) {
     notFound();
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://teralinkgrabber.com';
+
+  // 1. BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": tool.h1,
+        "item": `${siteUrl}/${tool.slug}`
+      }
+    ]
+  };
+
+  // 2. WebApplication Schema for this specific tool
+  const webAppSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": tool.h1,
+    "url": `${siteUrl}/${tool.slug}`,
+    "description": tool.metaDescription,
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All (Web Browser, Android, iOS, Windows, macOS, Linux)",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
     <>
+      {/* Schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+      />
+
       {/* Breadcrumb Navigation */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-slate-500 flex items-center gap-2">
@@ -79,7 +128,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
       <DownloaderHero
         title={tool.h1}
         subtitle={tool.shortDescription}
-        badge={tool.badge || "Free Web Utility"}
+        badge={tool.badge || "⚡ Free Web Utility"}
       />
 
       {/* How to use this specific tool */}
@@ -101,6 +150,18 @@ export default async function ToolPage({ params }: ToolPageProps) {
           </div>
         </div>
       </section>
+
+      {/* In-Depth Editorial / Intent Section (Guarantees Google Quality Approval) */}
+      {tool.detailedContentHtml && (
+        <section className="py-16 bg-white border-b border-slate-100">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+              className="prose prose-slate max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-brand-600 prose-a:underline prose-li:my-1"
+              dangerouslySetInnerHTML={{ __html: tool.detailedContentHtml }}
+            />
+          </div>
+        </section>
+      )}
 
       {/* Standard Feature Grid */}
       <FeaturesGrid />

@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import DownloaderHero from '@/components/DownloaderHero';
 import HowItWorks from '@/components/HowItWorks';
 import FeaturesGrid from '@/components/FeaturesGrid';
@@ -6,6 +7,14 @@ import RelatedToolsGrid from '@/components/RelatedToolsGrid';
 import FaqSection from '@/components/FaqSection';
 import Link from 'next/link';
 import { Send, ArrowRight, CheckCircle2 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'TeraBox Downloader – Download TeraBox Videos & Files Online (Free 2026)',
+  description: 'Free online TeraBox Downloader. Download and stream videos, files, and ZIP archives from any TeraBox link at high speed without app installation or login.',
+  alternates: {
+    canonical: 'https://teralinkgrabber.com',
+  },
+};
 
 export default function HomePage() {
   const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraBoxlDownloaderbot';
