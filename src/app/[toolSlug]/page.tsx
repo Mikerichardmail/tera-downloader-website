@@ -31,24 +31,41 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
   }
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://teralinkgrabber.com';
+  let pageTitle = `${tool.h1} | TeraLinkGrabber`;
+  if (pageTitle.length < 45) {
+    pageTitle = `${tool.h1} – Free Tool | TeraLinkGrabber`;
+  } else if (pageTitle.length > 65) {
+    pageTitle = `${tool.primaryKeyword} | TeraLinkGrabber`;
+  }
 
   return {
-    title: tool.title,
+    title: {
+      absolute: pageTitle,
+    },
     description: tool.metaDescription,
     keywords: [tool.primaryKeyword, ...tool.supportingKeywords],
     alternates: {
       canonical: `${siteUrl}/${tool.slug}`,
     },
     openGraph: {
-      title: tool.title,
+      title: pageTitle,
       description: tool.metaDescription,
       url: `${siteUrl}/${tool.slug}`,
       type: 'website',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${tool.h1} — TeraLinkGrabber`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: tool.title,
+      title: pageTitle,
       description: tool.metaDescription,
+      images: ['/og-image.png'],
     },
   };
 }

@@ -4,13 +4,57 @@ import Link from 'next/link';
 import { ArrowLeft, ShieldAlert, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'DMCA & Copyright Compliance Policy | TeraLinkGrabber',
-  description: 'DMCA copyright infringement notification and takedown policy for TeraLinkGrabber.com.',
+  title: {
+    absolute: 'DMCA & Copyright Compliance Policy | TeraLinkGrabber',
+  },
+  description:
+    'DMCA copyright infringement notification and intellectual property compliance policy for TeraLinkGrabber.com. Contact our designated agent for swift link removal.',
+  alternates: {
+    canonical: 'https://teralinkgrabber.com/dmca',
+  },
+  openGraph: {
+    title: 'DMCA & Copyright Compliance Policy | TeraLinkGrabber',
+    description:
+      'DMCA copyright infringement notification and intellectual property compliance policy for TeraLinkGrabber.com. Contact our designated agent for swift link removal.',
+    url: 'https://teralinkgrabber.com/dmca',
+    type: 'website',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DMCA & Copyright Compliance Policy | TeraLinkGrabber',
+    description:
+      'DMCA copyright infringement notification and intellectual property compliance policy for TeraLinkGrabber.com.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function DmcaPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://teralinkgrabber.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "DMCA Policy",
+        "item": "https://teralinkgrabber.com/dmca"
+      }
+    ]
+  };
+
   return (
     <div className="bg-white py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/" className="inline-flex items-center gap-1 text-xs text-brand-600 font-semibold mb-6 hover:underline">
           <ArrowLeft className="w-3.5 h-3.5" />

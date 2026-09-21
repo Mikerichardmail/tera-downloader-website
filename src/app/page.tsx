@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { Send, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'TeraBox Downloader – Download TeraBox Videos & Files Online (Free 2026)',
+  title: 'TeraBox Downloader – Free Online Video & File Grabber',
   description: 'Free online TeraBox Downloader. Download and stream videos, files, and ZIP archives from any TeraBox link at high speed without app installation or login.',
   alternates: {
     canonical: 'https://teralinkgrabber.com',

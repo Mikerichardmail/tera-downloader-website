@@ -25,24 +25,36 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   }
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://teralinkgrabber.com';
+  const pageTitle = `${post.title} | TeraLinkGrabber`;
 
   return {
-    title: `${post.title} | TeraLinkGrabber`,
+    title: {
+      absolute: pageTitle,
+    },
     description: post.metaDescription,
     alternates: {
       canonical: `${siteUrl}/blog/${post.slug}`,
     },
     openGraph: {
-      title: post.title,
+      title: pageTitle,
       description: post.metaDescription,
       url: `${siteUrl}/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.publishedDate,
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: pageTitle,
       description: post.metaDescription,
+      images: ['/og-image.png'],
     },
   };
 }
@@ -73,11 +85,36 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       "name": "TeraLinkGrabber",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://teralinkgrabber.com/logo.webp"
+        "url": "https://teralinkgrabber.com/og-image.png"
       }
     },
     "datePublished": post.publishedDate,
     "mainEntityOfPage": `https://teralinkgrabber.com/blog/${post.slug}`
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://teralinkgrabber.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog Guides",
+        "item": "https://teralinkgrabber.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.h1,
+        "item": `https://teralinkgrabber.com/blog/${post.slug}`
+      }
+    ]
   };
 
   return (
@@ -85,6 +122,10 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Breadcrumb Navigation */}
@@ -135,7 +176,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
           <div className="mb-8 p-5 bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <p className="text-xs uppercase font-bold tracking-wider text-sky-400">Ready to download?</p>
-              <h3 className="text-base font-bold mt-0.5">Use our free TeraBox Link Grabber</h3>
+              <p className="text-base font-bold mt-0.5">Use our free TeraBox Link Grabber</p>
             </div>
             <div className="flex items-center gap-2">
               <Link

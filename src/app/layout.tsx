@@ -7,7 +7,7 @@ import TelegramStickyBar from '@/components/TelegramStickyBar';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://teralinkgrabber.com'),
   title: {
-    default: 'TeraBox Downloader – Download TeraBox Videos & Files Online (Free 2026)',
+    default: 'TeraBox Downloader – Free Online Video & File Grabber',
     template: '%s | TeraLinkGrabber',
   },
   description:
@@ -30,13 +30,22 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://teralinkgrabber.com',
     siteName: 'TeraLinkGrabber',
-    title: 'TeraBox Downloader – Download TeraBox Videos & Files Online',
+    title: 'TeraBox Downloader – Free Online Video & File Grabber',
     description: 'Fast, free online TeraBox downloader. Stream and save videos directly in 1080p without installing the official app.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'TeraLinkGrabber — Online TeraBox Downloader & Video Player',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TeraBox Downloader – Free Online Tool',
+    title: 'TeraBox Downloader – Free Online Video & File Grabber',
     description: 'Fast, free online TeraBox downloader. Download videos and files with zero app installs.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,

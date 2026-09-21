@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeraLinkGrabber — SEO Audit Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen p-6 md:p-12">
+  <div class="max-w-6xl mx-auto space-y-8">
+    <!-- Header -->
+    <header class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-6 gap-4">
+      <div>
+        <h1 class="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">
+          TeraLinkGrabber SEO Audit Engine
+        </h1>
+        <p class="text-sm text-slate-400 mt-1">Automated Best-Practices Evaluation Across All Production Routes</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-xs px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-slate-400">
+          Audited: 2026-09-21
+        </span>
+        <span class="text-xs px-3 py-1 bg-blue-950/60 border border-blue-800 rounded-full text-blue-300 font-semibold">
+          18 Routes Checked
+        </span>
+      </div>
+    </header>
+
+    <!-- Score Summary Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 shadow-lg">
+        <p class="text-xs uppercase font-semibold text-slate-400">Site Health Score</p>
+        <p class="text-4xl font-black mt-2 text-emerald-400">99%</p>
+        <div class="w-full bg-slate-800 h-2 rounded-full mt-3 overflow-hidden">
+          <div class="h-full bg-emerald-400" style="width: 99%"></div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/80 border border-red-900/40 rounded-xl p-5 shadow-lg">
+        <p class="text-xs uppercase font-semibold text-red-400">Critical Issues</p>
+        <p class="text-4xl font-black text-red-400 mt-2">0</p>
+        <p class="text-xs text-slate-400 mt-2">Immediate indexing/ranking threats</p>
+      </div>
+
+      <div class="bg-slate-900/80 border border-yellow-900/40 rounded-xl p-5 shadow-lg">
+        <p class="text-xs uppercase font-semibold text-yellow-400">Warnings</p>
+        <p class="text-4xl font-black text-yellow-400 mt-2">5</p>
+        <p class="text-xs text-slate-400 mt-2">Suboptimal SERP snippet or CTR</p>
+      </div>
+
+      <div class="bg-slate-900/80 border border-blue-900/40 rounded-xl p-5 shadow-lg">
+        <p class="text-xs uppercase font-semibold text-blue-400">Opportunities</p>
+        <p class="text-4xl font-black text-blue-400 mt-2">0</p>
+        <p class="text-xs text-slate-400 mt-2">GEO & AI Search enhancements</p>
+      </div>
+    </div>
+
+    <!-- Priority Action Items -->
+    <section class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 shadow-lg space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2">
+        <span>🚀</span> Top SEO Improvements Required
+      </h2>
+      <div class="space-y-3">
+        
+          <div class="p-4 rounded-lg border bg-yellow-950/20 border-yellow-900/50">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300">
+                WARNING &bull; Content
+              </span>
+              <span class="text-xs text-slate-400 font-mono">5 pages affected</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-200 mt-2">Word count meets intent threshold (>= 300 words for tools, >= 800 for blog)</p>
+            <p class="text-xs text-slate-400 mt-1"><strong class="text-slate-300">Action:</strong> Expand page content. Thin pages risk Helpful Content de-indexation. Add informative sections, FAQs, or editorial guides.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- Page Results Table -->
+    <section class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 shadow-lg space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2">
+        <span>📄</span> Page-by-Page Audit Scores
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="text-xs uppercase bg-slate-950/70 text-slate-400 border-b border-slate-800">
+            <tr>
+              <th class="py-3 px-4">Route</th>
+              <th class="py-3 px-4">Score</th>
+              <th class="py-3 px-4">Title Length</th>
+              <th class="py-3 px-4">Word Count</th>
+              <th class="py-3 px-4">Schemas</th>
+              <th class="py-3 px-4">Issues</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-mono text-xs">
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">blog/how-to-download-terabox-files.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">95%</td>
+                <td class="py-3 px-4 text-slate-300">59 chars</td>
+                <td class="py-3 px-4 text-slate-300">549 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, Article, BreadcrumbList</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    1 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">blog/how-to-download-terabox-videos.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">95%</td>
+                <td class="py-3 px-4 text-slate-300">60 chars</td>
+                <td class="py-3 px-4 text-slate-300">714 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, Article, BreadcrumbList</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    1 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">blog/terabox-download-speed.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">95%</td>
+                <td class="py-3 px-4 text-slate-300">57 chars</td>
+                <td class="py-3 px-4 text-slate-300">527 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, Article, BreadcrumbList</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    1 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">blog/terabox-download-without-app.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">95%</td>
+                <td class="py-3 px-4 text-slate-300">59 chars</td>
+                <td class="py-3 px-4 text-slate-300">549 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, Article, BreadcrumbList</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    1 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">blog/terabox-download-without-login.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">95%</td>
+                <td class="py-3 px-4 text-slate-300">58 chars</td>
+                <td class="py-3 px-4 text-slate-300">493 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, Article, BreadcrumbList</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    1 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">dmca.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">52 chars</td>
+                <td class="py-3 px-4 text-slate-300">214 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">download-terabox-link-video.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">45 chars</td>
+                <td class="py-3 px-4 text-slate-300">545 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">index.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">53 chars</td>
+                <td class="py-3 px-4 text-slate-300">842 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">privacy.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">50 chars</td>
+                <td class="py-3 px-4 text-slate-300">246 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terabox-direct-download.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">56 chars</td>
+                <td class="py-3 px-4 text-slate-300">579 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terabox-downloader-online-free.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">48 chars</td>
+                <td class="py-3 px-4 text-slate-300">520 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terabox-file-downloader.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">53 chars</td>
+                <td class="py-3 px-4 text-slate-300">524 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terabox-link-downloader.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">53 chars</td>
+                <td class="py-3 px-4 text-slate-300">642 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terabox-online.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">52 chars</td>
+                <td class="py-3 px-4 text-slate-300">612 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terabox-player.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">51 chars</td>
+                <td class="py-3 px-4 text-slate-300">545 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terabox-video-downloader.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">54 chars</td>
+                <td class="py-3 px-4 text-slate-300">612 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terabox-video-player.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">50 chars</td>
+                <td class="py-3 px-4 text-slate-300">508 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList, WebApplication, HowTo, FAQPage</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+              <tr class="hover:bg-slate-800/40 transition">
+                <td class="py-3 px-4 text-blue-400 font-medium">terms.html</td>
+                <td class="py-3 px-4 font-bold text-emerald-400">100%</td>
+                <td class="py-3 px-4 text-slate-300">51 chars</td>
+                <td class="py-3 px-4 text-slate-300">232 words</td>
+                <td class="py-3 px-4 text-slate-400">WebApplication, BreadcrumbList</td>
+                <td class="py-3 px-4">
+                  <span class="px-2 py-1 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    0 issues
+                  </span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-xs text-slate-500 pt-6 border-t border-slate-800/80">
+      TeraLinkGrabber Automated SEO Audit System &bull; Generated dynamically for teralinkgrabber.com
+    </footer>
+  </div>
+</body>
+</html>

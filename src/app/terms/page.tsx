@@ -4,13 +4,57 @@ import Link from 'next/link';
 import { ArrowLeft, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | TeraLinkGrabber',
-  description: 'Terms of Service and Acceptable Use Policy for TeraLinkGrabber.com.',
+  title: {
+    absolute: 'Terms of Service & Acceptable Use | TeraLinkGrabber',
+  },
+  description:
+    'Terms of Service and Acceptable Use Policy for TeraLinkGrabber.com. Understand user rights, service disclaimers, and intellectual property compliance.',
+  alternates: {
+    canonical: 'https://teralinkgrabber.com/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service & Acceptable Use | TeraLinkGrabber',
+    description:
+      'Terms of Service and Acceptable Use Policy for TeraLinkGrabber.com. Understand user rights, service disclaimers, and intellectual property compliance.',
+    url: 'https://teralinkgrabber.com/terms',
+    type: 'website',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms of Service & Acceptable Use | TeraLinkGrabber',
+    description:
+      'Terms of Service and Acceptable Use Policy for TeraLinkGrabber.com.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function TermsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://teralinkgrabber.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms of Service",
+        "item": "https://teralinkgrabber.com/terms"
+      }
+    ]
+  };
+
   return (
     <div className="bg-white py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/" className="inline-flex items-center gap-1 text-xs text-brand-600 font-semibold mb-6 hover:underline">
           <ArrowLeft className="w-3.5 h-3.5" />
@@ -22,7 +66,7 @@ export default function TermsPage() {
             <FileText className="w-6 h-6" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-black text-slate-900">
-            Terms of Service
+            Terms of Service & Acceptable Use
           </h1>
         </div>
 
@@ -50,6 +94,11 @@ export default function TermsPage() {
           <h2 className="text-lg font-bold text-slate-900 pt-4">4. Limitation of Liability</h2>
           <p>
             In no event shall TeraLinkGrabber, its operators, or affiliates be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use this service.
+          </p>
+
+          <h2 className="text-lg font-bold text-slate-900 pt-4">5. Service Modifications & Contact</h2>
+          <p>
+            We reserve the right to modify, suspend, or terminate the utility at any time without notice. Continued use of the website following changes constitutes acceptance of the modified Terms of Service. For questions or legal notifications regarding these terms, please contact legal@teralinkgrabber.com.
           </p>
         </div>
       </div>
