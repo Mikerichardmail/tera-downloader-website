@@ -447,15 +447,39 @@ async function runAudit() {
     ];
 
     for (const r of routes) {
-      const pageUrl = `${SITE_URL}/${r}`;
+      const pagePath = r ? `/${r}` : '/';
+      const pageUrl = `${SITE_URL}${pagePath}`;
       process.stdout.write(`Auditing [LIVE] ${pageUrl}... `);
       try {
-        const resp = await fetch(pageUrl, { headers: { 'User-Agent': 'TeraLinkGrabber-SEO-Auditor/1.0' } });
-        if (!resp.ok) {
-          console.log(`\x1b[31mHTTP ${resp.status}\x1b[0m`);
-          continue;
-        }
-        const html = await resp.text();
+        const html = await new Promise((resolve, reject) => {
+          import('https').then(({ default: https }) => {
+            const req = https.request(
+              {
+                host: '185.199.108.153',
+                port: 443,
+                path: pagePath,
+                method: 'GET',
+                servername: 'teralinkgrabber.com',
+                headers: {
+                  Host: 'teralinkgrabber.com',
+                  'User-Agent': 'TeraLinkGrabber-SEO-Auditor/1.0',
+                },
+              },
+              (res) => {
+                if (res.statusCode !== 200) {
+                  reject(new Error(`HTTP ${res.statusCode}`));
+                  return;
+                }
+                let data = '';
+                res.on('data', (chunk) => (data += chunk));
+                res.on('end', () => resolve(data));
+              }
+            );
+            req.on('error', reject);
+            req.end();
+          });
+        });
+
         const res = auditPage(html, r || 'index.html', pageUrl);
         results.push(res);
         const color = res.score >= 90 ? '\x1b[32m' : res.score >= 75 ? '\x1b[33m' : '\x1b[31m';
