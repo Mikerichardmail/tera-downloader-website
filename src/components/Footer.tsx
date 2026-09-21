@@ -4,7 +4,7 @@ import { DownloadCloud, ShieldCheck, Send } from 'lucide-react';
 import { allToolsList } from '@/data/toolsData';
 
 export default function Footer() {
-  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraLinkGrabberBot';
+  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraBoxlDownloaderbot';
 
   return (
     <footer className="border-t border-slate-200 bg-white text-slate-600 mt-20">

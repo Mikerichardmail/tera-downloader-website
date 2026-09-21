@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     notFound();
   }
 
-  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraLinkGrabberBot';
+  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraBoxlDownloaderbot';
 
   // Article JSON-LD Schema
   const articleSchema = {

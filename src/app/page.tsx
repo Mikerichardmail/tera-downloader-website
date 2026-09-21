@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { Send, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function HomePage() {
-  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraLinkGrabberBot';
+  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraBoxlDownloaderbot';
 
   return (
     <>

@@ -22,7 +22,7 @@ interface ResultCardProps {
 
 export default function ResultCard({ result, onReset }: ResultCardProps) {
   const [copied, setCopied] = useState(false);
-  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraLinkGrabberBot';
+  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraBoxlDownloaderbot';
 
   // Construct dynamic deep link for Telegram bot
   const encodedPayload = typeof window !== 'undefined'

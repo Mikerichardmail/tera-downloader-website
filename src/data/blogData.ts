@@ -40,7 +40,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Method 2: Download Directly via Telegram Bot</h2>
       <p>If you prefer an even faster workflow on mobile devices, you can send your link directly to our automated Telegram Bot:</p>
       <ul>
-        <li>Launch our official bot: <strong>@TeraLinkGrabberBot</strong>.</li>
+        <li>Launch our official bot: <strong>@TeraBoxlDownloaderbot</strong>.</li>
         <li>Paste your TeraBox link into the chat window and press send.</li>
         <li>The bot will reply within seconds with the direct video file or an instant streaming link that you can save straight to your Telegram saved messages or device gallery.</li>
       </ul>

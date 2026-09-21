@@ -41,7 +41,7 @@ const defaultFaqs: FaqItem[] = [
   },
   {
     question: "How does your Telegram Bot work?",
-    answer: "Our automated Telegram Bot (@TeraLinkGrabberBot) allows you to forward or paste any TeraBox link inside Telegram to receive direct streaming links and file downloads instantly without using a web browser."
+    answer: "Our automated Telegram Bot (@TeraBoxlDownloaderbot) allows you to forward or paste any TeraBox link inside Telegram to receive direct streaming links and file downloads instantly without using a web browser."
   }
 ];
 

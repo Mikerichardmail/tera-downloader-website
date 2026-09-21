@@ -40,7 +40,7 @@ Update your Telegram bot username in `.env.local`:
 ```env
 NEXT_PUBLIC_SITE_URL=https://teralinkgrabber.com
 NEXT_PUBLIC_SITE_NAME=TeraLinkGrabber
-NEXT_PUBLIC_TELEGRAM_BOT_USERNAME=YourBotUsername
+NEXT_PUBLIC_TELEGRAM_BOT_USERNAME=TeraBoxlDownloaderbot
 ```
 
 ### 4. Run development server

@@ -20,7 +20,7 @@ export default function DownloaderHero({
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<DownloadResult | null>(null);
 
-  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraLinkGrabberBot';
+  const botUsername = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'TeraBoxlDownloaderbot';
 
   // Dynamic Telegram deep link based on current input
   const telegramStartParam = url.trim()
