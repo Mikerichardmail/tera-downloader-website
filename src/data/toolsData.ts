@@ -368,11 +368,92 @@ export const toolsData: ToolInfo[] = [
       <h2>100% Free Unlimited Link Downloads for Everyone</h2>
       <p>Unlike other download services that force you to buy premium VIP subscriptions or enter credit card information after 2 downloads, <strong>TeraBox Downloader Online Free</strong> provides truly unlimited conversions. Our project is built for the community to ensure open, unrestricted access to files and media.</p>
     `
+  },
+  {
+    slug: "terabox-telegram-bot",
+    title: "TeraBox Telegram Bot – Instant Video Downloader & Stream",
+    h1: "TeraBox Telegram Bot",
+    primaryKeyword: "TeraBox Telegram Bot",
+    metaDescription: "Best TeraBox Telegram Bot. Download and stream videos, files, and ZIP archives directly in Telegram at high speed without app installs or login.",
+    shortDescription: "Extract and stream TeraBox videos directly inside Telegram. High-speed, 100% free cloud bot with zero registration required.",
+    iconName: "Send",
+    badge: "45,000 Searches/Mo • Instant Bot",
+    supportingKeywords: [
+      "terabox telegram bot",
+      "terabox bot link",
+      "best terabox telegram bot",
+      "terabox video downloader bot",
+      "terabox bot 2026",
+      "terabox bot download link"
+    ],
+    features: [
+      "Instant video playback and direct MP4 delivery inside Telegram",
+      "Bypasses mobile app install popups and aggressive browser ads",
+      "Supports 1024tera, mirrobox, nephobox, and standard terabox links",
+      "100% Free forever with zero registration or login requirements"
+    ],
+    steps: [
+      { step: 1, title: "Launch @TeraBoxlDownloaderbot", desc: "Open Telegram and tap Start on our official downloader bot." },
+      { step: 2, title: "Paste Your TeraBox Share Link", desc: "Send any shared video or file URL into the bot chat window." },
+      { step: 3, title: "Stream or Save to Gallery", desc: "Instantly stream in 1080p or save the file to your device storage." }
+    ],
+    faqs: [
+      {
+        question: "How do I use the TeraBox Telegram bot?",
+        answer: "Simply launch @TeraBoxlDownloaderbot on Telegram, paste any TeraBox share link (including 1024tera and mirrobox domains), and hit send. The bot instantly resolves the link and returns an uncompressed, streamable MP4 file or direct download link."
+      },
+      {
+        question: "Is the TeraBox Telegram bot free and safe?",
+        answer: "Yes, our Telegram bot is 100% free to use. It does not require your email, phone number, or TeraBox account login. All downloads stream through secure cloud delivery nodes without logging personal activity."
+      },
+      {
+        question: "Can I save videos directly to my phone gallery from Telegram?",
+        answer: "Yes! When the bot sends you the video file, tap the three dots (⋮) on the video bubble and select 'Save to Gallery' (on Android) or 'Save Video' (on iPhone). The video will be saved directly to your camera roll for offline viewing."
+      },
+      {
+        question: "Does the bot support large ZIP or RAR files?",
+        answer: "Yes, the bot processes files up to standard Telegram limits (up to 2GB or 4GB for Telegram Premium accounts) and generates high-speed direct browser links for even larger archives."
+      }
+    ],
+    detailedContentHtml: `
+      <h2>The Best TeraBox Telegram Bot for Fast Video Downloads</h2>
+      <p>Using a <strong>TeraBox Telegram bot</strong> is the fastest and most convenient method to download or stream videos shared via TeraBox links. Rather than struggling with slow mobile browser downloads, intrusive interstitial ads, or mandatory prompts to install the official 150MB mobile application, our automated bot handles the entire link resolution process directly inside your Telegram messenger.</p>
+
+      <h2>Why Millions of Users Prefer Telegram Over the Official App</h2>
+      <p>The official TeraBox service requires account registration and throttles free-tier download speeds to around 100–300 KB/s to force users into purchasing VIP subscriptions. Furthermore, mobile browsers are frequently blocked from downloading video files directly unless the official client is installed on the device.</p>
+      
+      <p>Our companion bot, <strong>@TeraBoxlDownloaderbot</strong>, completely removes these roadblocks by fetching files on high-bandwidth cloud servers and streaming them straight to your Telegram chat. Users benefit from:</p>
+      <ul>
+        <li><strong>No App Installation Required:</strong> Free up device storage by keeping your smartphone free of bulky third-party apps.</li>
+        <li><strong>Original 1080p Quality:</strong> Stream video files with original audio tracks and full high-definition resolution without compression artifacts.</li>
+        <li><strong>Background Downloading:</strong> Telegram downloads proceed seamlessly in the background while you use other mobile applications.</li>
+        <li><strong>Single-Tap Camera Roll Saving:</strong> Easily export videos from Telegram into your Android Gallery or iOS Photos app.</li>
+      </ul>
+
+      <h2>Supported TeraBox Mirror Domains</h2>
+      <p>TeraBox frequently generates shared links using alternative mirror domains. Our Telegram bot is engineered to automatically detect, normalize, and resolve all recognized mirror formats, including:</p>
+      <ul>
+        <li><code>terabox.com/s/...</code> and <code>teraboxapp.com/s/...</code></li>
+        <li><code>1024tera.com/s/...</code> and <code>1024terabox.com/s/...</code></li>
+        <li><code>mirrobox.com/s/...</code> and <code>nephobox.com/s/...</code></li>
+        <li><code>freeterabox.com/s/...</code> and <code>4funbox.com/s/...</code></li>
+      </ul>
+
+      <h2>Step-by-Step Instructions: How to Use the Bot</h2>
+      <p>Getting your download started takes less than ten seconds:</p>
+      <ol>
+        <li>Copy any TeraBox or 1024Tera link from WhatsApp, Discord, Chrome, or Reddit.</li>
+        <li>Open Telegram and start <a href="https://t.me/TeraBoxlDownloaderbot" target="_blank" rel="noopener noreferrer" class="text-brand-600 font-bold underline">@TeraBoxlDownloaderbot</a>.</li>
+        <li>Paste the copied URL into the chat and tap send.</li>
+        <li>The bot processes the link and sends you a playable video bubble along with a high-speed direct CDN link.</li>
+      </ol>
+    `
   }
 ];
 
 export const allToolsList = [
   { slug: "", name: "TeraBox Downloader (Homepage)", volume: "74,000" },
+  { slug: "terabox-telegram-bot", name: "TeraBox Telegram Bot", volume: "45,000" },
   { slug: "terabox-link-downloader", name: "TeraBox Link Downloader", volume: "14,800" },
   { slug: "terabox-video-downloader", name: "TeraBox Video Downloader", volume: "High Demand" },
   { slug: "terabox-online", name: "TeraBox Online", volume: "49,500" },
